@@ -22,5 +22,10 @@ public class FoodOrder {
     private Orders order;
 
 
+    @JoinColumn(name = "FoodId") //주문 외래키
+    @ManyToOne
+    private Food Food;
+
+
 
 }
