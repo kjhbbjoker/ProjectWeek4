@@ -29,5 +29,10 @@ public class RestaurantDto {
         this.minOrderPrice = minOrderPrice;
     }
 
+    public RestaurantDto(Long id){
+        this.id = id;
+
+    }
+
 
 }

@@ -1,8 +1,11 @@
 package com.example.projectweek4.model;
 
+import com.example.projectweek4.dto.FoodDto;
+import lombok.Data;
+
 import javax.persistence.*;
 
-
+@Data
 @Entity
 public class FoodOrder {
 
@@ -12,16 +15,26 @@ public class FoodOrder {
     private  Long id;
 
     @Column(name = "quantity")
-    private Long quantity; //주문 갯수 수량
+    private int quantity; //주문 갯수 수량
 
-    @Column(name = "price")
-    private int price; //가격
+    @Column(name = "totalPrice")
+    private int totalPrice; //총가격
 
-    @JoinColumn(name = "food_id") // 음식 외래키
+    @JoinColumn(name = "orderId") //주문 외래키
     @ManyToOne
-    private Food foods;
+    private Orders order;
 
-    @JoinColumn(name = "order_id") //주문 외래키
+
+    @JoinColumn(name = "FoodId") //주문 외래키
     @ManyToOne
-    private Order order;
+    private Food Food;
+
+    public FoodOrder() {
+
+    }
+
+
+
+
+
 }

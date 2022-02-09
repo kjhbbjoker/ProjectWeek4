@@ -25,7 +25,7 @@ public class RestaurantService {
         for (Restaurant item : list) {
             result.add(item.GetDto());
         }
-        return result.stream().toArray(RestaurantDto[]::new);
+        return result.stream().toArray(RestaurantDto[]::new); //질문
     }
 
     public RestaurantDto register(RestaurantDto paramDto) {
