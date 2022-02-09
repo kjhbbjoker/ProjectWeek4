@@ -1,8 +1,11 @@
 package com.example.projectweek4.model;
 
 
+import lombok.Data;
+
 import javax.persistence.*;
 
+@Data
 @Entity
 public class Orders {
 

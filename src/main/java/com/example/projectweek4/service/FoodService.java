@@ -41,7 +41,7 @@ public class FoodService {
         Restaurant restaurant = restaurantRepository.findById(restaurantId).get();
         Food current = foodRepository.findByNameAndRestaurant(FoodRequest.getName(), restaurant);
         if (current != null) {
-            throw new Exception();
+                throw new Exception();
         }
 
         Food result = foodRepository.save(new Food(FoodRequest, restaurant));

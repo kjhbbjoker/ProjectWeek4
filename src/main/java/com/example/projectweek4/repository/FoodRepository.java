@@ -5,6 +5,7 @@ import com.example.projectweek4.model.Restaurant;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
+import java.util.Map;
 
 public interface FoodRepository extends JpaRepository<Food, Long> {
 
